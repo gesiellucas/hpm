@@ -27,4 +27,4 @@ sysctl vm.overcommit_memory=1
 
 # start redis server
 
-redis-server /usr/local/etc/redis/redis.conf --bind 0.0.0.0
+redis-server /usr/local/etc/redis/redis.conf --bind 0.0.0.0 --protected-mode no
