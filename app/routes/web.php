@@ -1,7 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Redis;
+use App\Http\Controllers\ProfileController;
+use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,21 +17,22 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-
-    $redis = Redis::connection();
-
-    try {
-        $redis->set('test_key', 'test_value');
-        $value = $redis->get('test_key');
-        if ($value === 'test_value') {
-            echo 'Redis connection successful!';
-        } else {
-            echo 'Redis connection failed: Unexpected value retrieved';
-        }
-    } catch (Exception $e) {
-        echo 'Redis connection failed: ' . $e->getMessage();
-    }
-
-    dd('teste');
-    return view('welcome');
+    return Inertia::render('Welcome', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+        'laravelVersion' => Application::VERSION,
+        'phpVersion' => PHP_VERSION,
+    ]);
 });
+
+Route::get('/dashboard', function () {
+    return Inertia::render('Dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+require __DIR__.'/auth.php';
