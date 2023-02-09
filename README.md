@@ -47,7 +47,16 @@ Funcionalidades
 - Insomnia collections com o nome de endpoints.json
 - README com tutorial de como utilizar a plataforma
 
+### MVP
+O mínimo viável desse produto é que ele consiga listar pacientes, cadastrar, modificar ou apagar. Para isso será concluído primeiro, depois da arquitetura é claro, o CRUD em laravel e Vuejs.
+
 #### *Referências*
 [Conventional Commit](https://www.conventionalcommits.org/en/v1.0.0/)
+
 [Error on Redis Docker](https://r-future.github.io/post/how-to-fix-redis-warnings-with-docker/)
+
 [Config Nginx](https://medium.com/@vhsilva.ap/configurando-laravel-6-nginx-e-postgresql-com-docker-9ad29c53d5)
+
+[Password Redis](https://aregsar.com/blog/2020/laravel-app-with-redis-in-docker/)
+
+[Denied Redis connection](https://github.com/redis/redis/issues/3106)
