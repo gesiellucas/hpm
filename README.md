@@ -60,3 +60,5 @@ O mínimo viável desse produto é que ele consiga listar pacientes, cadastrar, 
 [Password Redis](https://aregsar.com/blog/2020/laravel-app-with-redis-in-docker/)
 
 [Denied Redis connection](https://github.com/redis/redis/issues/3106)
+
+[Elasticsearch Overview](https://madewithlove.com/blog/software-engineering/how-to-integrate-elasticsearch-in-your-laravel-app-2022/)
