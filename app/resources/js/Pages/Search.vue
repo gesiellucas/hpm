@@ -84,7 +84,7 @@ export default {
                     <div class="row">
                         <div class="col-12 d-flex justify-content-around">
                             <a :href="'/editar/'+item.id" class="btn btn-sm btn-danger">EDITAR</a>
-                            <a class="btn btn-sm btn-danger">APAGAR</a>
+                            <a :href="'/delete/'+item.id" class="btn btn-sm btn-danger">APAGAR</a>
                         </div>
                     </div>
                 </div>
