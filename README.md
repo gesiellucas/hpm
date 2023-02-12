@@ -62,3 +62,7 @@ O mínimo viável desse produto é que ele consiga listar pacientes, cadastrar, 
 [Denied Redis connection](https://github.com/redis/redis/issues/3106)
 
 [Elasticsearch Overview](https://madewithlove.com/blog/software-engineering/how-to-integrate-elasticsearch-in-your-laravel-app-2022/)
+
+[Submit Laravel With Vue](https://www.tutsmake.com/laravel-9-vue-js-form-submit-using-v-form-example/)
+
+[Validar CPF](https://gist.github.com/rafael-neri/ab3e58803a08cb4def059fce4e3c0e40)
