@@ -44,7 +44,6 @@ export default {
             }
         },
         async createpatient() {
-            console.log('Create Patient')
             let data =  new FormData()
             let config = {
                 headers: { 'content-type': 'multipart/form-data' }
@@ -62,9 +61,15 @@ export default {
             data.append('city', this.address.city)
             data.append('state', this.address.state)
             data.append('zipcode', this.address.zipcode)
+
             return await axios.post('/create-patient', data, config)
-                .then(res => console.log(res))
-                .catch(err => console.log(err))
+            .then(res => {
+                console.log(res)
+                if(res.status == 200){
+                    window.location = '/pesquisa'
+                }
+            })
+            .catch(err => console.log(err))
         }
     }
 }
