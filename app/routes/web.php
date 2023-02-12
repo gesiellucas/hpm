@@ -30,7 +30,9 @@ Route::post('/create-patient', [PatientController::class, 'create']);
 
 Route::get('/users', [PatientController::class, 'list']);
 
-Route::get('/editar/{id}', [PatientController::class, 'update']);
+Route::get('/editar/{id}', [PatientController::class, 'updatePatient']);
+Route::post('/update-patient', [PatientController::class, 'update']);
 
+Route::get('/delete/{id}', [PatientController::class, 'delete']);
 
 require __DIR__.'/auth.php';
