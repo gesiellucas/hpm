@@ -213,3 +213,8 @@ export default {
 
     </div>
 </template>
+<style>
+.card {
+    background: var(--gdt-card)
+}
+</style>

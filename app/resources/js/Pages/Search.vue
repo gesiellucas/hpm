@@ -41,9 +41,14 @@ export default {
                 <div class="row my-2">
                     <div class="col-12 d-flex justify-content-between align-items-center">
                         <h1>Pesquisar paciente</h1>
-                        <a href="/cadastro" class="btn btn-success">
-                            Adicionar paciente
-                        </a>
+                        <div class="group-btn">
+                            <a href="/csv" class="mx-4 btn btn-outline-info">
+                                Importar csv
+                            </a>
+                            <a href="/cadastro" class="btn btn-info">
+                                Adicionar paciente
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <input class="form-control form-control-lg" type="text" placeholder="Digite o nome do paciente..." aria-label=".form-control-lg example" :model="searchresult" @input="event => this.getPatients(event.target.value)"/>
@@ -83,8 +88,8 @@ export default {
                 <div class="card-footer">
                     <div class="row">
                         <div class="col-12 d-flex justify-content-around">
-                            <a :href="'/editar/'+item.id" class="btn btn-sm btn-danger">EDITAR</a>
-                            <a :href="'/delete/'+item.id" class="btn btn-sm btn-danger">APAGAR</a>
+                            <a :href="'/editar/'+item.id" class="btn btn-sm btn-outline-info">EDITAR</a>
+                            <a :href="'/delete/'+item.id" class="btn btn-sm btn-outline-danger">APAGAR</a>
                         </div>
                     </div>
                 </div>
@@ -96,5 +101,8 @@ export default {
 <style scoped>
 .unique-card {
     width: 250px;
+}
+.card {
+    background: var(--gdt-card)
 }
 </style>

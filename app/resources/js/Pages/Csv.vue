@@ -176,4 +176,7 @@ export default {
     filter: none;
     opacity: .5;
 }
+.card {
+    background: var(--gdt-card)
+}
 </style>

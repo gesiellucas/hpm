@@ -1,3 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+:root {
+    --gdt-primary: linear-gradient(47deg, rgb(23, 205, 205) -70%, rgb(23, 25, 95) 91.5%);
+    --gdt-card: linear-gradient(45deg, rgba(10,35,81,1) 0%, rgba(3,70,148,1) 100%);
+}
