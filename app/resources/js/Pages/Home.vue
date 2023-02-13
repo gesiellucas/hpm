@@ -11,6 +11,7 @@
                     <a href="/pesquisa" type="button" class="btn btn-primary btn-lg px-4 gap-3">Pesquisar pacientes</a>
                     <a href="/cadastro" type="button" class="btn btn-outline-secondary btn-lg px-4">Cadastrar Pacientes</a>
                 </div>
+                <a href="/csv" type="button" class="py-3 btn btn-link">Importar arquivos .csv</a>
             </div>
         </div>
     </main>
